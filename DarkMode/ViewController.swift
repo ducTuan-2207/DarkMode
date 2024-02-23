@@ -1,19 +1,18 @@
-//
-//  ViewController.swift
-//  DarkMode
-//
-//  Created by macOS on 19/02/2024.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var changeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let userInterfaceStyle = traitCollection.userInterfaceStyle
+        if userInterfaceStyle == .dark {
+            changeButton.tintColor = UIColor.white
+        } else {
+            changeButton.tintColor = UIColor.blue
+        }
     }
-
-
 }
-
